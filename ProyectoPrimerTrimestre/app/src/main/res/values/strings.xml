@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Proyecto Primer Trimestre</string>
+    <string name="tvBienvenido1">Bienvenido de nuevo</string>
+    <string name="tvBienvenido2">Wikipeces-Iniciar sesión</string>
+    <string name="username">Inserta tu nombre de usuario...</string>
+    <string name="card_required">*</string>
+    <string name="pass">Inserta tu contraseña...</string>
+    <string name="loginbutton_text">Iniciar sesión</string>
+    <string name="crear_cuenta">Crear cuenta</string>
+</resources>

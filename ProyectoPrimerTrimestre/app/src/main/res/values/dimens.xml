@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textinput_width">300dp</dimen>
+    <dimen name="textinput_margin">400dp</dimen>
+    <dimen name="user_margin_bottom">20dp</dimen>
+    <dimen name="pass_margin_bottom">140dp</dimen>
+    <dimen name="button_width">120dp</dimen>
+    <dimen name="common_padding_default">16dp</dimen>
+    <dimen name="card_img_size">120dp</dimen>
+    <dimen name="common_margin_min">8dp</dimen>
+    <dimen name="margin_top_tilPassword">10dp</dimen>
+    <dimen name="loginbutton_width">300dp</dimen>
+    <dimen name="loginbutton_height">50dp</dimen>
+    <dimen name="margin_top_loginbutton">5dp</dimen>
+</resources>
