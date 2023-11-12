@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/imgEntrada"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/card_img_size"
+        android:layout_margin="@dimen/common_margin_min"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/tvHabitat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/entrada_habitat"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:textAppearance="?attr/textAppearanceCaption"
+        app:layout_constraintStart_toStartOf="@id/imgEntrada"
+        app:layout_constraintBottom_toBottomOf="@id/imgEntrada"
+        android:paddingBottom="@dimen/entrada_marginBottom"
+        android:paddingLeft="@dimen/entrada_horizontal" />
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="@string/entrada_name"
+        android:textAppearance="?attr/textAppearanceSubtitle2"
+        app:layout_constraintStart_toStartOf="@id/imgEntrada"
+        app:layout_constraintBottom_toTopOf="@id/tvHabitat"
+        android:paddingLeft="@dimen/entrada_horizontal"
+        android:textStyle="bold"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/usuarioWidth"
+        android:layout_height="@dimen/usuarioHeight"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/imgEntrada"
+        app:layout_constraintEnd_toEndOf="@id/imgEntrada"
+        android:layout_marginBottom="@dimen/entrada_marginBottom"
+        android:layout_marginRight="@dimen/entrada_horizontal"
+        android:backgroundTint="@color/azulmarino">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgPhoto"
+                android:layout_width="@dimen/card_img_profile_size"
+                android:layout_height="@dimen/card_img_profile_size"
+                android:contentDescription="@string/description_user_photo"
+                android:layout_margin="@dimen/common_margin_min"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+            <TextView
+                android:id="@+id/tvUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@string/user_name"
+                app:layout_constraintStart_toEndOf="@id/imgPhoto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textSize="8sp"
+                android:textColor="@color/white"
+                android:paddingLeft="@dimen/entrada_marginBottom"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

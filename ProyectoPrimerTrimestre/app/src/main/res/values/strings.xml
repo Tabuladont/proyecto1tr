@@ -7,4 +7,11 @@
     <string name="pass">Inserta tu contraseña...</string>
     <string name="loginbutton_text">Iniciar sesión</string>
     <string name="crear_cuenta">Crear cuenta</string>
+    <string name="inicio">Inicio</string>
+    <string name="recomendadas1">Entradas recomendadas</string>
+    <string name="recomendadas2">Estas son algunas entradas que podrían interesarte</string>
+    <string name="description_user_photo">Foto del usuario</string>
+    <string name="entrada_name">Nombre de entrada</string>
+    <string name="entrada_habitat">Habita en...</string>
+    <string name="user_name">Usuario</string>
 </resources>
