@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottomHome"
+        android:title="@string/inicio"
+        android:icon="@drawable/ic_home"
+        />
+
+    <item
+        android:id="@+id/bottomHistorial"
+        android:title="@string/historial"
+        android:icon="@drawable/ic_clock"
+        />
+
+    <item
+        android:id="@+id/bottomSettings"
+        android:title="@string/opciones"
+        android:icon="@drawable/ic_settings"
+        />
+</menu>

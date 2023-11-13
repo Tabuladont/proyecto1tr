@@ -16,4 +16,11 @@
     <string name="user_name">Usuario</string>
     <string name="usuarios1">Cuentas recomendadas</string>
     <string name="usuarios2">Estas son algunas de las cuentas más activas</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="historial">Historial</string>
+    <string name="opciones">Opciones</string>
+    <string name="nombrentrada">Nombre de la entrada</string>
+    <string name="creadapor">Entrada creada por</string>
+    <string name="description_entry_photo">Foto de la entrada</string>
 </resources>
