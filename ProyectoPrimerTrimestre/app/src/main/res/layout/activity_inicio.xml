@@ -36,6 +36,7 @@
         android:id="@+id/entradasRecomendadas1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingTop="@dimen/common_padding_default"
         android:text="@string/recomendadas1"
         android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@id/topAppBar"
@@ -55,7 +56,7 @@
         android:textColor="@color/muted"
         />
 
-    
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="0dp"
@@ -64,13 +65,238 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/entradasRecomendadas2"
-        tools:listitem="@layout/item_entrada"
-    />
+        tools:listitem="@layout/item_entrada" />
+
+
+
+    <TextView
+        android:id="@+id/usuariosRecomendados1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/usuarios1"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/recyclerView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/usuariosRecomendados2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/usuarios2"
+        app:layout_constraintTop_toBottomOf="@id/usuariosRecomendados1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/muted"
+        />
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/usuarios"
+        android:layout_width="0dp"
+        android:paddingTop="@dimen/common_padding_default"
+        android:layout_height="100dp"
+        android:layout_marginTop="@dimen/common_padding_default"
+
+        app:layout_constraintTop_toBottomOf="@id/usuariosRecomendados2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+    >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/user1"
+                android:layout_width="@dimen/usuarioWidth"
+                android:layout_height="@dimen/usuarioHeight"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintEnd_toStartOf="@id/user2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                android:backgroundTint="@color/azulmarino">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imgPhoto1"
+                        android:layout_width="@dimen/card_img_profile_size"
+                        android:layout_height="@dimen/card_img_profile_size"
+                        android:contentDescription="@string/description_user_photo"
+                        android:layout_margin="@dimen/common_margin_min"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/tvUser1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FishEnjoyer24"
+                        app:layout_constraintStart_toEndOf="@id/imgPhoto1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:textSize="8sp"
+                        android:textColor="@color/white"
+                        android:paddingLeft="@dimen/entrada_marginBottom"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/user2"
+                android:layout_width="@dimen/usuarioWidth"
+                android:layout_height="@dimen/usuarioHeight"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/user1"
+                app:layout_constraintTop_toTopOf="parent"
+                android:backgroundTint="@color/azulmarino">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imgPhoto2"
+                        android:layout_width="@dimen/card_img_profile_size"
+                        android:layout_height="@dimen/card_img_profile_size"
+                        android:contentDescription="@string/description_user_photo"
+                        android:layout_margin="@dimen/common_margin_min"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+                    <TextView
+                        android:id="@+id/tvUser2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FanDLosPeces"
+                        app:layout_constraintStart_toEndOf="@id/imgPhoto2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:textSize="8sp"
+                        android:textColor="@color/white"
+                        android:paddingLeft="@dimen/entrada_marginBottom"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
 
 
 
 
+            <androidx.cardview.widget.CardView
+                android:id="@+id/user3"
+                android:layout_width="@dimen/usuarioWidth"
+                android:layout_height="@dimen/usuarioHeight"
+                android:layout_marginTop="@dimen/common_padding_default"
+                app:cardCornerRadius="20dp"
+                
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/user4"
+                android:backgroundTint="@color/azulmarino">
 
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imgPhoto3"
+                        android:layout_width="@dimen/card_img_profile_size"
+                        android:layout_height="@dimen/card_img_profile_size"
+                        android:contentDescription="@string/description_user_photo"
+                        android:layout_margin="@dimen/common_margin_min"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+                    <TextView
+                        android:id="@+id/tvUser3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CirujanoFan"
+                        app:layout_constraintStart_toEndOf="@id/imgPhoto3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:textSize="8sp"
+                        android:textColor="@color/white"
+                        android:paddingLeft="@dimen/entrada_marginBottom"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/user4"
+                android:layout_width="@dimen/usuarioWidth"
+                android:layout_height="@dimen/usuarioHeight"
+                app:cardCornerRadius="20dp"
+                android:layout_marginTop="@dimen/common_padding_default"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/user3"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:backgroundTint="@color/azulmarino">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imgPhoto4"
+                        android:layout_width="@dimen/card_img_profile_size"
+                        android:layout_height="@dimen/card_img_profile_size"
+                        android:contentDescription="@string/description_user_photo"
+                        android:layout_margin="@dimen/common_margin_min"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+                    <TextView
+                        android:id="@+id/tvUser4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RokuhiraChihiro"
+                        app:layout_constraintStart_toEndOf="@id/imgPhoto4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:textSize="8sp"
+                        android:textColor="@color/white"
+                        android:paddingLeft="@dimen/entrada_marginBottom"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
 
 
 

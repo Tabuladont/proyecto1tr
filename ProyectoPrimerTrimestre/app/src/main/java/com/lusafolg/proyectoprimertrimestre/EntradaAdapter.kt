@@ -44,6 +44,14 @@ class EntradaAdapter(private val entradas: List<Entrada>, private val listener:O
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .centerCrop()
                 .into(binding.imgEntrada)
+
+            Glide.with(context)
+                .load(entrada.usuario.foto)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .centerCrop()
+                .circleCrop()
+                .into(binding.imgPhoto)
+
         }
     }
 }
