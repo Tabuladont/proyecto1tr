@@ -22,13 +22,13 @@ class LoginActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        val u1=Usuario( "FishEnjoyer92", "PECES", "Un fanático de los peces más.", "https://badis.es/img/cms/Blog/2022/marinos-faciles/pez-pallaso.jpg")
+        val u1=Usuario( 1,"FishEnjoyer92", "PECES", "Un fanático de los peces más.", "https://badis.es/img/cms/Blog/2022/marinos-faciles/pez-pallaso.jpg")
 
-        val u2=Usuario("FanDLosPeces", "FISH", "ME ENCANTAN LOS PECES.", "https://badis.es/img/cms/Blog/2022/marinos-faciles/pez-pallaso.jpg")
+        val u2=Usuario(2, "FanDLosPeces", "FISH", "ME ENCANTAN LOS PECES.", "https://badis.es/img/cms/Blog/2022/marinos-faciles/pez-pallaso.jpg")
 
-        val u3=Usuario("CirujanoFan", "CIRUJANOS", "Un cirujano fan de los cirujanos.","https://www.fishipedia.es/wp-content/uploads/2018/10/20150414_120002_Paracanthurus-hepatus_EIO.jpg")
+        val u3=Usuario(3,"CirujanoFan", "CIRUJANOS", "Un cirujano fan de los cirujanos.","https://www.fishipedia.es/wp-content/uploads/2018/10/20150414_120002_Paracanthurus-hepatus_EIO.jpg")
 
-        val u4=Usuario("RokuhiraChihiro", "Kagurabachi", "[REFERENCIA A UN MANGA AL AZAR,POR FAVOR IGNORAR]", "https://cff2.earth.com/uploads/2022/01/06080341/Goldfish.jpg")
+        val u4=Usuario(4,"RokuhiraChihiro", "Kagurabachi", "Hijo de Kunishige Rokuhira. ¿Mis aficiones? Cortar a aquellos que no merezcan usar una katana y los peces de colores.", "https://cff2.earth.com/uploads/2022/01/06080341/Goldfish.jpg")
 
 
         var usuarios= mutableListOf<Usuario>(u1,u2,u3,u4)
@@ -80,9 +80,17 @@ class LoginActivity : AppCompatActivity() {
 
             var usuariosp=preferences.getString(user,null)
 
+            var id:Int=1
+
+            for(usuario in usuarios){
+
+                id+=1
+
+            }
+
             if (usuariosp==null){
 
-                val usuarionuevo=Usuario(user,pass, "Un nuevo usuario en Wikipeces", "https://badis.es/img/cms/Blog/2022/marinos-faciles/pez-pallaso.jpg")
+                val usuarionuevo=Usuario(id,user,pass, "Un nuevo usuario en Wikipeces", "https://badis.es/img/cms/Blog/2022/marinos-faciles/pez-pallaso.jpg")
 
                 usuarios.add(usuarionuevo)
 

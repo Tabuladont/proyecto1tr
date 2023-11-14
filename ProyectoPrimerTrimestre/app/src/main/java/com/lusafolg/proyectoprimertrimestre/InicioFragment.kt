@@ -29,6 +29,7 @@ class InicioFragment : Fragment(), OnClickListener {
         val entradas = mutableListOf<Entrada>()
 
         val u1 = Usuario(
+            1,
             "FishEnjoyer92",
             "PECES",
             "Un fanático de los peces más.",
@@ -36,24 +37,11 @@ class InicioFragment : Fragment(), OnClickListener {
         )
 
         val u2 = Usuario(
+            2,
             "FanDLosPeces",
             "FISH",
             "ME ENCANTAN LOS PECES.",
             "https://badis.es/img/cms/Blog/2022/marinos-faciles/pez-pallaso.jpg"
-        )
-
-        val u3 = Usuario(
-            "CirujanoFan",
-            "CIRUJANOS",
-            "Un cirujano fan de los cirujanos.",
-            "https://www.fishipedia.es/wp-content/uploads/2018/10/20150414_120002_Paracanthurus-hepatus_EIO.jpg"
-        )
-
-        val u4 = Usuario(
-            "RokuhiraChihiro",
-            "Kagurabachi",
-            "[REFERENCIA A UN MANGA AL AZAR,POR FAVOR IGNORAR]",
-            "https://cff2.earth.com/uploads/2022/01/06080341/Goldfish.jpg"
         )
 
         val e1 = Entrada(
@@ -118,6 +106,30 @@ class InicioFragment : Fragment(), OnClickListener {
         binding.recyclerView.apply {
             layoutManager = linearLayoutManager
             adapter = entradaAdapter
+        }
+
+        binding.user1.setOnClickListener(){
+
+            cambiarpantalla(PerfilActivity(), 1)
+
+        }
+
+        binding.user2.setOnClickListener(){
+
+            cambiarpantalla(PerfilActivity(), 2)
+
+        }
+
+        binding.user3.setOnClickListener(){
+
+            cambiarpantalla(PerfilActivity(), 3)
+
+        }
+
+        binding.user4.setOnClickListener(){
+
+            cambiarpantalla(PerfilActivity(), 4)
+
         }
 
         loadimage(

@@ -33,7 +33,7 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/tvHistorial1"
+        android:id="@+id/tvAjustes1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/common_padding_default"
@@ -46,25 +46,278 @@
         />
 
     <TextView
-        android:id="@+id/tvHistorial2"
+        android:id="@+id/tvAjustes2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/historial2"
-        app:layout_constraintTop_toBottomOf="@id/tvHistorial1"
+        app:layout_constraintTop_toBottomOf="@id/tvAjustes1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:textColor="@color/muted"
         />
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/topAppBar_text_margin"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ajuste1"
+        android:layout_marginTop="@dimen/common_padding_default"
+        app:layout_constraintTop_toBottomOf="@id/tvAjustes2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvHistorial2"
-        tools:listitem="@layout/item_ajuste" />
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ajuste_height"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvAjuste1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enviar datos de uso"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/swAjuste1"
+            android:textStyle="bold"
+            />
+
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/swAjuste1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginRight="@dimen/common_padding_default"
+            android:checked="true"
+            />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ajuste2"
+        android:layout_marginTop="@dimen/ajuste_marginTop"
+        app:layout_constraintTop_toBottomOf="@id/ajuste1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ajuste_height"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvAjuste2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recibir notificaciones"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/swAjuste2"
+                android:textStyle="bold"
+                />
+
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/swAjuste2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginRight="@dimen/common_padding_default"
+                android:checked="true"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ajuste3"
+        android:layout_marginTop="@dimen/ajuste_marginTop"
+        app:layout_constraintTop_toBottomOf="@id/ajuste2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ajuste_height"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvAjuste3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mostrar autor de entrada(no interactuable)"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/swAjuste3"
+                android:textStyle="bold"
+                />
+
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/swAjuste3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginRight="@dimen/common_padding_default"
+                android:checked="true"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ajuste4"
+        android:layout_marginTop="@dimen/ajuste_marginTop"
+        app:layout_constraintTop_toBottomOf="@id/ajuste3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ajuste_height"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvAjuste4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activar modo ahorro de datos"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/swAjuste4"
+                android:textStyle="bold"
+                />
+
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/swAjuste4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginRight="@dimen/common_padding_default"
+                android:checked="true"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ajuste5"
+        android:layout_marginTop="@dimen/ajuste_marginTop"
+        app:layout_constraintTop_toBottomOf="@id/ajuste4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ajuste_height"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvAjuste5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mostrar mi cuenta como pública"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/swAjuste5"
+                android:textStyle="bold"
+                />
+
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/swAjuste5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginRight="@dimen/common_padding_default"
+                android:checked="true"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ajuste6"
+        android:layout_marginTop="@dimen/ajuste_marginTop"
+        app:layout_constraintTop_toBottomOf="@id/ajuste5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ajuste_height"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvAjuste6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detener la app en segundo plano"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/swAjuste6"
+                android:textStyle="bold"
+                />
+
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/swAjuste6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginRight="@dimen/common_padding_default"
+                android:checked="true"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ajuste6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:backgroundTint="@color/logoutred"
+        android:text="@string/logout"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

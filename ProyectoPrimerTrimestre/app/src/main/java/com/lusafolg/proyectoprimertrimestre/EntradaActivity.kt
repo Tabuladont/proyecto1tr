@@ -1,8 +1,12 @@
 package com.lusafolg.proyectoprimertrimestre
 
+import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.Toast
+import androidx.core.content.ContentProviderCompat.requireContext
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.lusafolg.proyectoprimertrimestre.databinding.ActivityEntradaBinding
@@ -17,6 +21,7 @@ class EntradaActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val u1 = Usuario(
+            1,
             "FishEnjoyer92",
             "PECES",
             "Un fanático de los peces más.",
@@ -24,6 +29,7 @@ class EntradaActivity : AppCompatActivity() {
         )
 
         val u2 = Usuario(
+            2,
             "FanDLosPeces",
             "FISH",
             "ME ENCANTAN LOS PECES.",
@@ -102,6 +108,12 @@ class EntradaActivity : AppCompatActivity() {
 
             loadprofilepicture(entrada.usuario.foto,binding.imgPhoto)
 
+        binding.user.setOnClickListener(){
+
+            cambiarpantalla(PerfilActivity(), entrada.usuario.id)
+
+        }
+
     }
 
     private fun loadimage(url:String,id: ImageView) {
@@ -118,5 +130,13 @@ class EntradaActivity : AppCompatActivity() {
             .diskCacheStrategy(
                 DiskCacheStrategy.ALL
             ).centerCrop().circleCrop().into(id)
+    }
+
+    private fun cambiarpantalla(destino:Activity,id:Int){
+
+        val intent=Intent(this, destino::class.java).putExtra("id", id)
+
+        startActivity(intent)
+
     }
 }

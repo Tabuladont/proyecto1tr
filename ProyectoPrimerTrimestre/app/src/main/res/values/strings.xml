@@ -26,4 +26,10 @@
     <string name="historial1">¿Te has dejado algo por ver?</string>
     <string name="historial2">Estas son las últimas entradas que has consultado</string>
     <string name="ajustes">Ajustes</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="usuarioWikipeces">Usuario de Wikipeces</string>
+    <string name="perfil_username">Nombre de usuario</string>
+    <string name="descripcion">Descripción</string>
+    <string name="habitat">Hábitat</string>
+    <string name="perfil">Perfil</string>
 </resources>

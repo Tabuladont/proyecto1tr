@@ -23,4 +23,7 @@
     <dimen name="card_img_profile_size">15dp</dimen>
     <dimen name="card_img_profile_size2">30dp</dimen>
     <dimen name="marginright_creadapor">90dp</dimen>
+    <dimen name="ajuste_height">60dp</dimen>
+    <dimen name="ajuste_marginTop">5dp</dimen>
+    <dimen name="entradapor_marginBottom">100dp</dimen>
 </resources>

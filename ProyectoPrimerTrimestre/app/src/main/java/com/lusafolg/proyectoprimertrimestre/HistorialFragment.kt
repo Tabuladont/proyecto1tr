@@ -22,6 +22,7 @@ class HistorialFragment : Fragment(),OnClickListener {
         val entradas = mutableListOf<Entrada>()
 
         val u1 = Usuario(
+            1,
             "FishEnjoyer92",
             "PECES",
             "Un fanático de los peces más.",
@@ -29,6 +30,7 @@ class HistorialFragment : Fragment(),OnClickListener {
         )
 
         val u2 = Usuario(
+            2,
             "FanDLosPeces",
             "FISH",
             "ME ENCANTAN LOS PECES.",

@@ -9,5 +9,6 @@
     <color name="lime_light">#F6FA8A</color>
     <color name="gray_light">#AFAFAF</color>
     <color name="entrada_gray">#E8E7E7</color>
+    <color name="logoutred">#FF0000</color>
 
 </resources>

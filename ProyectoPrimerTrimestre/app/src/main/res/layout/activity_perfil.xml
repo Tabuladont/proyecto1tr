@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EntradaActivity">
-
+    tools:context=".PerfilActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/topAppBar"
@@ -20,13 +19,13 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/tvNombreEntrada"
+                android:id="@+id/Usuario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:text="@string/nombrentrada"
+                android:text="@string/perfil"
                 android:textSize="26sp"
                 android:layout_marginBottom="@dimen/topAppBar_text_margin"/>
 
@@ -46,23 +45,23 @@
     />
 
     <TextView
-        android:id="@+id/tvHabitat"
+        android:id="@+id/tvNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/ivEntrada"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="@dimen/common_padding_default"
-        android:text="@string/habitat"
+        android:text="@string/perfil_username"
         android:textStyle="bold"
         android:textSize="20sp"
         />
 
     <TextView
-        android:id="@+id/tvHabitTexto"
+        android:id="@+id/tvNombreTexto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tvHabitat"
+        app:layout_constraintTop_toBottomOf="@id/tvNombre"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="@dimen/common_padding_default"
@@ -74,7 +73,7 @@
         android:id="@+id/tvDescripcion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tvHabitTexto"
+        app:layout_constraintTop_toBottomOf="@id/tvNombreTexto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="@dimen/common_padding_default"
@@ -97,59 +96,15 @@
         />
 
     <TextView
-        android:id="@+id/tvCreadaPor"
+        android:id="@+id/tvUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="@dimen/entradapor_marginBottom"
-        android:layout_marginRight="@dimen/marginright_creadapor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="@string/creadapor"
+        android:layout_marginBottom="@dimen/entradapor_marginBottom"
+        android:text="@string/usuarioWikipeces"
+    />
 
-        />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/user"
-        android:layout_width="@dimen/usuarioWidth2"
-        android:layout_height="@dimen/usuarioHeight2"
-        app:cardCornerRadius="20dp"
-        app:layout_constraintStart_toEndOf="@id/tvCreadaPor"
-        app:layout_constraintBottom_toBottomOf="@id/tvCreadaPor"
-        app:layout_constraintTop_toTopOf="@id/tvCreadaPor"
-        android:layout_marginLeft="@dimen/common_padding_default"
-        android:backgroundTint="@color/azulmarino">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imgPhoto"
-                android:layout_width="@dimen/card_img_profile_size2"
-                android:layout_height="@dimen/card_img_profile_size2"
-                android:contentDescription="@string/description_entry_photo"
-                android:layout_margin="@dimen/common_margin_min"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"/>
-
-
-            <TextView
-                android:id="@+id/tvUser"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toEndOf="@id/imgPhoto"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:textSize="12sp"
-                android:textColor="@color/white"
-                android:paddingLeft="@dimen/entrada_marginBottom"
-                />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
