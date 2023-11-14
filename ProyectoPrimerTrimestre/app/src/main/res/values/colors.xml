@@ -8,5 +8,6 @@
     <color name="lime_dark">#808423</color>
     <color name="lime_light">#F6FA8A</color>
     <color name="gray_light">#AFAFAF</color>
+    <color name="entrada_gray">#E8E7E7</color>
 
 </resources>

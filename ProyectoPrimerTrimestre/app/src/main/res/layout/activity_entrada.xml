@@ -38,7 +38,7 @@
     <ImageView
         android:id="@+id/ivEntrada"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="250dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/topAppBar"
@@ -67,6 +67,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="@dimen/common_padding_default"
         android:textSize="18sp"
+        android:background="@color/entrada_gray"
         />
 
     <TextView
@@ -90,15 +91,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="@dimen/common_padding_default"
+        android:paddingHorizontal="@dimen/common_padding_default"
         android:textSize="18sp"
+        android:background="@color/entrada_gray"
         />
 
     <TextView
         android:id="@+id/tvCreadaPor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tvDescripTexto"
-        android:layout_marginTop="@dimen/common_padding_default"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="100dp"
         android:layout_marginRight="@dimen/marginright_creadapor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -108,8 +111,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/user"
-        android:layout_width="@dimen/usuarioWidth"
-        android:layout_height="@dimen/usuarioHeight"
+        android:layout_width="@dimen/usuarioWidth2"
+        android:layout_height="@dimen/usuarioHeight2"
         app:cardCornerRadius="20dp"
         app:layout_constraintStart_toEndOf="@id/tvCreadaPor"
         app:layout_constraintBottom_toBottomOf="@id/tvCreadaPor"
@@ -123,8 +126,8 @@
 
             <ImageView
                 android:id="@+id/imgPhoto"
-                android:layout_width="@dimen/card_img_profile_size"
-                android:layout_height="@dimen/card_img_profile_size"
+                android:layout_width="@dimen/card_img_profile_size2"
+                android:layout_height="@dimen/card_img_profile_size2"
                 android:contentDescription="@string/description_entry_photo"
                 android:layout_margin="@dimen/common_margin_min"
                 app:layout_constraintStart_toStartOf="parent"
@@ -133,14 +136,14 @@
 
 
             <TextView
-                android:id="@+id/tvUser2"
+                android:id="@+id/tvUser"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toEndOf="@id/imgPhoto"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:textSize="8sp"
+                android:textSize="12sp"
                 android:textColor="@color/white"
                 android:paddingLeft="@dimen/entrada_marginBottom"
                 />

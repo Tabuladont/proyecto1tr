@@ -22,8 +22,9 @@
         android:background="@color/lime_dark"
         app:menu="@menu/bottommenu"
         app:itemIconSize="35dp"
-        app:itemIconTint="@color/lime_light"
-        app:itemTextColor="@color/lime_light"
+        app:itemIconTint="@color/azulmarino"
+        app:itemTextColor="@color/azulmarino"
+        app:backgroundTint="@color/gray_light"
         app:itemActiveIndicatorStyle="@style/App.CustomIndicator"
         />
 

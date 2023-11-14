@@ -1,59 +1,122 @@
 package com.lusafolg.proyectoprimertrimestre
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.lusafolg.proyectoprimertrimestre.databinding.FragmentHistorialBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+class HistorialFragment : Fragment(),OnClickListener {
+    private lateinit var entradaAdapter: EntradaAdapter
+    private lateinit var linearLayoutManager: RecyclerView.LayoutManager
+    private var _binding: FragmentHistorialBinding?=null
+    private val binding get() = _binding!!
 
-/**
- * A simple [Fragment] subclass.
- * Use the [HistorialFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class HistorialFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private fun getEntradas(): MutableList<Entrada> {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+        val entradas = mutableListOf<Entrada>()
+
+        val u1 = Usuario(
+            "FishEnjoyer92",
+            "PECES",
+            "Un fanático de los peces más.",
+            "https://badis.es/img/cms/Blog/2022/marinos-faciles/pez-pallaso.jpg"
+        )
+
+        val u2 = Usuario(
+            "FanDLosPeces",
+            "FISH",
+            "ME ENCANTAN LOS PECES.",
+            "https://badis.es/img/cms/Blog/2022/marinos-faciles/pez-pallaso.jpg"
+        )
+
+        val e1 = Entrada(
+            1,
+            "Cirujano amarillo",
+            "Es uno de los peces marinos más populares, resistentes y solicitados en acuariofilia. Es un ágil y vistoso nadador, además de sociable con la mayoría de habitantes del arrecife, a excepción de machos territoriales de su misma especie.",
+            "Pez de agua salada",
+            "https://badis.es/img/ets_blog/post/pez-cirujano-amarillo-badis-aquarios-reus.jpg",
+            u1
+        )
+
+        val e2 = Entrada(
+            2,
+            "Cirujano azul",
+            "El pez cirujano azul tiene un cuerpo comprimido lateralmente de color azul índigo y rayas negras, la superior desde el nacimiento de la aleta caudal hasta la cabeza, atravesando el ojo, y la inferior, aproximadamente hasta la altura de la aleta pectoral, que a menudo se unen dejando un círculo azul en el medio. Sus aletas dorsal y anal son de color azul coronadas ambas por una franja negra. Su aleta caudal es amarilla, así como el borde de sus aletas pectorales. La intensidad de la coloración varía en función de la edad.",
+            "Pez de agua salada",
+            "https://upload.wikimedia.org/wikipedia/commons/2/25/Blue_tang_%28Paracanthurus_hepatus%29_02.jpg",
+            u2
+        )
+
+        val e3 = Entrada(
+            3,
+            "Cirujano amarillo",
+            "Es uno de los peces marinos más populares, resistentes y solicitados en acuariofilia. Es un ágil y vistoso nadador, además de sociable con la mayoría de habitantes del arrecife, a excepción de machos territoriales de su misma especie.",
+            "Pez de agua salada",
+            "https://badis.es/img/ets_blog/post/pez-cirujano-amarillo-badis-aquarios-reus.jpg",
+            u1
+        )
+
+        val e4 = Entrada(
+            4,
+            "Cirujano azul",
+            "El pez cirujano azul tiene un cuerpo comprimido lateralmente de color azul índigo y rayas negras, la superior desde el nacimiento de la aleta caudal hasta la cabeza, atravesando el ojo, y la inferior, aproximadamente hasta la altura de la aleta pectoral, que a menudo se unen dejando un círculo azul en el medio. Sus aletas dorsal y anal son de color azul coronadas ambas por una franja negra. Su aleta caudal es amarilla, así como el borde de sus aletas pectorales. La intensidad de la coloración varía en función de la edad.",
+            "Pez de agua salada",
+            "https://upload.wikimedia.org/wikipedia/commons/2/25/Blue_tang_%28Paracanthurus_hepatus%29_02.jpg",
+            u2
+        )
+        entradas.add(e1)
+
+        entradas.add(e2)
+
+        entradas.add(e3)
+
+        entradas.add(e4)
+
+
+
+        return entradas
+
+    }
+
+    override fun onClick(entrada: Entrada, position: Int) {
+
+        cambiarpantalla(EntradaActivity(), entrada.id)
+
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_historial, container, false)
+
+        _binding= FragmentHistorialBinding.inflate(inflater,container,false)
+        val view=binding.root
+        entradaAdapter = EntradaAdapter(getEntradas(), this)
+        linearLayoutManager = LinearLayoutManager(requireContext())
+        binding.recyclerView.apply {
+            layoutManager = linearLayoutManager
+            adapter = entradaAdapter
+        }
+
+        return view
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment HistorialFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            HistorialFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding=null
+    }
+
+    private fun cambiarpantalla(destino: Activity, id:Int){
+
+        val intent= Intent(requireContext(), destino::class.java).putExtra("id", id)
+
+        startActivity(intent)
+
     }
 }

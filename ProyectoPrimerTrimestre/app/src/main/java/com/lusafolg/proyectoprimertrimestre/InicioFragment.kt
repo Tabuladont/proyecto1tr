@@ -1,5 +1,7 @@
 package com.lusafolg.proyectoprimertrimestre
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -17,6 +19,10 @@ import com.lusafolg.proyectoprimertrimestre.databinding.FragmentInicioBinding
 
 class InicioFragment : Fragment(), OnClickListener {
 
+    private lateinit var entradaAdapter: EntradaAdapter
+    private lateinit var linearLayoutManager: RecyclerView.LayoutManager
+    private var _binding:FragmentInicioBinding?=null
+    private val binding get() = _binding!!
 
     private fun getEntradas(): MutableList<Entrada> {
 
@@ -76,37 +82,39 @@ class InicioFragment : Fragment(), OnClickListener {
             "https://badis.es/img/ets_blog/post/pez-cirujano-amarillo-badis-aquarios-reus.jpg",
             u1
         )
-
-        val e4 = Entrada(
-            4,
-            "Cirujano azul",
-            "El pez cirujano azul tiene un cuerpo comprimido lateralmente de color azul índigo y rayas negras, la superior desde el nacimiento de la aleta caudal hasta la cabeza, atravesando el ojo, y la inferior, aproximadamente hasta la altura de la aleta pectoral, que a menudo se unen dejando un círculo azul en el medio. Sus aletas dorsal y anal son de color azul coronadas ambas por una franja negra. Su aleta caudal es amarilla, así como el borde de sus aletas pectorales. La intensidad de la coloración varía en función de la edad.",
-            "Pez de agua salada",
-            "https://upload.wikimedia.org/wikipedia/commons/2/25/Blue_tang_%28Paracanthurus_hepatus%29_02.jpg",
-            u2
-        )
-
         entradas.add(e1)
 
         entradas.add(e2)
 
         entradas.add(e3)
 
-        entradas.add(e4)
-
         return entradas
 
     }
 
+    override fun onClick(entrada: Entrada, position: Int) {
 
-    private lateinit var entradaAdapter: EntradaAdapter
-    private lateinit var linearLayoutManager: RecyclerView.LayoutManager
-    private lateinit var binding: FragmentInicioBinding
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = FragmentInicioBinding.inflate(layoutInflater)
+        cambiarpantalla(EntradaActivity(), entrada.id)
+
+    }
+
+    private fun loadimage(url: String, id: ImageView) {
+        Glide.with(this)
+            .load(url)
+            .diskCacheStrategy(
+                DiskCacheStrategy.ALL
+            ).centerCrop().circleCrop().into(id)
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+
+        _binding=FragmentInicioBinding.inflate(inflater,container,false)
+        val view=binding.root
         entradaAdapter = EntradaAdapter(getEntradas(), this)
-        linearLayoutManager = LinearLayoutManager(this)
+        linearLayoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.apply {
             layoutManager = linearLayoutManager
             adapter = entradaAdapter
@@ -132,26 +140,20 @@ class InicioFragment : Fragment(), OnClickListener {
             binding.imgPhoto4
         )
 
+        return view
     }
 
-    override fun onClick(entrada: Entrada, position: Int) {
-        TODO("Not yet implemented")
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding=null
     }
 
-    private fun loadimage(url: String, id: ImageView) {
-        Glide.with(this)
-            .load(url)
-            .diskCacheStrategy(
-                DiskCacheStrategy.ALL
-            ).centerCrop().circleCrop().into(id)
-    }
+    private fun cambiarpantalla(destino:Activity,id:Int){
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_inicio, container, false)
+        val intent=Intent(requireContext(), destino::class.java).putExtra("id", id)
+
+        startActivity(intent)
+
     }
 }
 

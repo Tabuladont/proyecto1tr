@@ -37,28 +37,32 @@ class InicioActivity : AppCompatActivity() {
 
     private fun initListeners(){
 
-        bottomNavigation.setOnItemSelectedListener {MenuItem->when(MenuItem.itemId){
+        bottomNavigation.setOnItemSelectedListener { MenuItem ->
+            when (MenuItem.itemId) {
 
-            R.id.bottomHome->{
+                R.id.bottomHome -> {
 
-                replaceFragment(InicioFragment())
-                true
+                    replaceFragment(InicioFragment())
+                    true
+
+                }
+
+                R.id.bottomHistorial -> {
+
+                    replaceFragment(HistorialFragment())
+                    true
+                }
+
+                R.id.bottomSettings -> {
+
+                    replaceFragment(AjustesFragment())
+                    true
+
+                }
+
+                else -> false
 
             }
-            R.id.bottomHistorial-> {
-
-                replaceFragment(HistorialFragment())
-                true
-            }
-            R.id.bottomSettings->{
-
-                replaceFragment(AjustesFragment())
-                true
-
-            }
-            else->false
-
-        }
 
         }
 
@@ -66,7 +70,9 @@ class InicioActivity : AppCompatActivity() {
 
     private fun replaceFragment(fragment: Fragment){
 
-        supportFragmentManager.beginTransaction().replace(R.id.frameContainer, fragment).commit()
+        supportFragmentManager.beginTransaction().replace(R.id.frameContainer, fragment)
+            .addToBackStack(null)
+            .commit()
 
     }
 

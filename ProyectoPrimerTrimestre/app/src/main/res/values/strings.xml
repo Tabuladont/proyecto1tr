@@ -23,4 +23,7 @@
     <string name="nombrentrada">Nombre de la entrada</string>
     <string name="creadapor">Entrada creada por</string>
     <string name="description_entry_photo">Foto de la entrada</string>
+    <string name="historial1">¿Te has dejado algo por ver?</string>
+    <string name="historial2">Estas son las últimas entradas que has consultado</string>
+    <string name="ajustes">Ajustes</string>
 </resources>

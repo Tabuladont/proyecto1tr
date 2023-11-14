@@ -1,11 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.ProyectoPrimerTrimestre" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/teal_dark</item>
-        <item name="colorPrimaryVariant">@color/lime_dark</item>
-        <item name="android:statusBarColor">@color/teal_dark</item>
-        <item name="colorOnPrimary">@color/lime_light</item>
-        <item name="colorOnPrimaryFixedVariant">@color/gray_light</item>
+
     </style>
 
     <style name="Theme.ProyectoPrimerTrimestre" parent="Base.Theme.ProyectoPrimerTrimestre" />
@@ -16,7 +12,7 @@
 
     <style name="App.CustomIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator" >
 
-        <item name="android:color">@color/teal_dark</item>
+        <item name="android:color">@color/gray_light</item>
 
     </style>
 
