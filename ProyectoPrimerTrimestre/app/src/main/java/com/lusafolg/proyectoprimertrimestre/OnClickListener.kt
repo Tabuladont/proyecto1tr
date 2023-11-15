@@ -4,4 +4,6 @@ interface OnClickListener {
 
     fun onClick(entrada: Entrada, position:Int)
 
+    fun onLongClick(entrada: Entrada)
+
 }

@@ -32,4 +32,15 @@
     <string name="descripcion">Descripción</string>
     <string name="habitat">Hábitat</string>
     <string name="perfil">Perfil</string>
+    <string name="ajuste1">Enviar datos de uso</string>
+    <string name="ajuste2">Recibir notificaciones</string>
+    <string name="ajuste3">Mostrar autor de entrada(no interactuable)</string>
+    <string name="ajuste4">Activar modo ahorro de datos</string>
+    <string name="ajuste5">Mostrar mi cuenta como pública</string>
+    <string name="ajuste6">Detener la app en segundo plano</string>
+    <string name="recordarcredenciales">Recordar mis credenciales</string>
+    <string name="username1">FishEnjoyer24</string>
+    <string name="username2">FanDLosPeces</string>
+    <string name="username3">CirujanoFan</string>
+    <string name="username4">RokuhiraChihiro</string>
 </resources>

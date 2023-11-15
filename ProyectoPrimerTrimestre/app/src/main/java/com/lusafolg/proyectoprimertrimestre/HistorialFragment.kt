@@ -92,6 +92,10 @@ class HistorialFragment : Fragment(),OnClickListener {
 
     }
 
+    override fun onLongClick(entrada: Entrada) {
+        TODO("Not yet implemented")
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

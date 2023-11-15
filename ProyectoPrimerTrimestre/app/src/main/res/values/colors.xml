@@ -3,6 +3,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="azulmarino">#1E36B1</color>
+    <color name="background">#95E0FF</color>
+    <color name="secondary">#76D3FA</color>
     <color name="muted">#9E9E9E</color>
     <color name="teal_dark">#00443C</color>
     <color name="lime_dark">#808423</color>

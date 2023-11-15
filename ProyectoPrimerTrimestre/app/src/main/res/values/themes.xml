@@ -2,6 +2,9 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.ProyectoPrimerTrimestre" parent="Theme.Material3.DayNight.NoActionBar">
 
+
+
+
     </style>
 
     <style name="Theme.ProyectoPrimerTrimestre" parent="Base.Theme.ProyectoPrimerTrimestre" />

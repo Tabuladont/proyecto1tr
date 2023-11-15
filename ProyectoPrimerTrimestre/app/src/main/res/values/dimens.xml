@@ -26,4 +26,15 @@
     <dimen name="ajuste_height">60dp</dimen>
     <dimen name="ajuste_marginTop">5dp</dimen>
     <dimen name="entradapor_marginBottom">100dp</dimen>
+    <dimen name="textsize_entrada">20sp</dimen>
+    <dimen name="textsize_topAppBar">26sp</dimen>
+    <dimen name="textsize_username">12sp</dimen>
+    <dimen name="textsize_info">18sp</dimen>
+    <dimen name="textsize_crearCuenta">16sp</dimen>
+    <dimen name="textsize_bienvenido1">32sp</dimen>
+    <dimen name="textsize_bienvenido2">26sp</dimen>
+    <dimen name="logincard_height">425dp</dimen>
+    <dimen name="imgentrada_height">250dp</dimen>
+    <dimen name="bienvenido_marginTop">32dp</dimen>
+    <dimen name="usuariologin_marginTop">50dp</dimen>
 </resources>

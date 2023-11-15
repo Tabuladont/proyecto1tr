@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PerfilActivity">
+    tools:context=".PerfilActivity"
+    android:background="@color/background">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/topAppBar"
@@ -12,7 +13,8 @@
         android:layout_height="@dimen/app_bar_height"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/secondary">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -26,7 +28,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:text="@string/perfil"
-                android:textSize="26sp"
+                android:textSize="@dimen/textsize_topAppBar"
                 android:layout_marginBottom="@dimen/topAppBar_text_margin"/>
 
 
@@ -37,7 +39,7 @@
     <ImageView
         android:id="@+id/ivEntrada"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="@dimen/imgentrada_height"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/topAppBar"
@@ -54,7 +56,7 @@
         android:layout_marginTop="@dimen/common_padding_default"
         android:text="@string/perfil_username"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:textSize="@dimen/textsize_entrada"
         />
 
     <TextView
@@ -65,8 +67,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="@dimen/common_padding_default"
-        android:textSize="18sp"
-        android:background="@color/entrada_gray"
+        android:textSize="@dimen/textsize_info"
+        android:background="@color/secondary"
         />
 
     <TextView
@@ -79,7 +81,7 @@
         android:layout_marginTop="@dimen/common_padding_default"
         android:text="@string/descripcion"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:textSize="@dimen/textsize_entrada"
         />
 
     <TextView
@@ -91,8 +93,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="@dimen/common_padding_default"
         android:paddingHorizontal="@dimen/common_padding_default"
-        android:textSize="18sp"
-        android:background="@color/entrada_gray"
+        android:textSize="@dimen/textsize_info"
+        android:background="@color/secondary"
         />
 
     <TextView

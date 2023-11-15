@@ -18,7 +18,7 @@
     
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
-        android:layout_height="425dp"
+        android:layout_height="@dimen/logincard_height"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,8 +38,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="32dp"
-            android:textSize="32sp"
+            android:layout_marginTop="@dimen/bienvenido_marginTop"
+            android:textSize="@dimen/textsize_bienvenido1"
             />
 
             <TextView
@@ -51,13 +51,13 @@
                 android:textStyle="italic"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:textSize="26sp" />
+                android:textSize="@dimen/textsize_bienvenido2" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilUser"
                 android:layout_width="@dimen/textinput_width"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="@dimen/usuariologin_marginTop"
                 android:hint="@string/username"
                 android:layout_marginBottom="@dimen/user_margin_bottom"
                 app:layout_constraintStart_toStartOf="parent"
@@ -97,7 +97,7 @@
                 android:id="@+id/cbRecordarme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Recordar mis credenciales"
+                android:text="@string/recordarcredenciales"
                 app:layout_constraintTop_toBottomOf="@id/tilPassword"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -124,7 +124,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:textColor="@color/azulmarino"
                 android:text="@string/crear_cuenta"
-                android:textSize="16sp"
+                android:textSize="@dimen/textsize_crearCuenta"
                 />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

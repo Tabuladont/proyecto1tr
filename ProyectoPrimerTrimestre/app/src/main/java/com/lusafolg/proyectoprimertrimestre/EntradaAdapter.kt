@@ -18,6 +18,8 @@ class EntradaAdapter(private val entradas: List<Entrada>, private val listener:O
         fun setListener(entrada: Entrada, position: Int) {
             binding.root.setOnClickListener { listener.onClick(entrada,
                 position) }
+
+            binding.root.setOnLongClickListener { listener.onLongClick(entrada); true }
         }
 
     }

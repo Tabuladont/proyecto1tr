@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InicioFragment">
+    tools:context=".InicioFragment"
+    android:background="@color/background">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/topAppBar"
@@ -12,7 +13,8 @@
             android:layout_height="@dimen/app_bar_height"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            android:backgroundTint="@color/secondary">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -25,7 +27,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     android:text="@string/inicio"
-                    android:textSize="26sp"
+                    android:textSize="@dimen/textsize_topAppBar"
                     android:layout_marginBottom="@dimen/topAppBar_text_margin"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -38,7 +40,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="@dimen/common_padding_default"
             android:text="@string/recomendadas1"
-            android:textSize="20sp"
+            android:textSize="@dimen/textsize_entrada"
             app:layout_constraintTop_toBottomOf="@id/topAppBar"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -74,7 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/usuarios1"
-            android:textSize="20sp"
+            android:textSize="@dimen/textsize_entrada"
             app:layout_constraintTop_toBottomOf="@id/recyclerView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -100,7 +102,7 @@
             android:paddingTop="@dimen/common_padding_default"
             android:layout_height="159dp"
             android:layout_marginTop="@dimen/common_padding_default"
-
+            android:backgroundTint="@color/background"
             app:layout_constraintTop_toBottomOf="@id/usuariosRecomendados2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -138,12 +140,12 @@
                             android:id="@+id/tvUser1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="FishEnjoyer24"
+                            android:text="@string/username1"
                             app:layout_constraintStart_toEndOf="@id/imgPhoto1"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            android:textSize="12sp"
+                            android:textSize="@dimen/textsize_username"
                             android:textColor="@color/white"
                             android:paddingLeft="@dimen/entrada_marginBottom"
                             />
@@ -182,12 +184,12 @@
                             android:id="@+id/tvUser2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="FanDLosPeces"
+                            android:text="@string/username2"
                             app:layout_constraintStart_toEndOf="@id/imgPhoto2"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            android:textSize="12sp"
+                            android:textSize="@dimen/textsize_username"
                             android:textColor="@color/white"
                             android:paddingLeft="@dimen/entrada_marginBottom"
                             />
@@ -230,12 +232,12 @@
                             android:id="@+id/tvUser3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="CirujanoFan"
+                            android:text="@string/username3"
                             app:layout_constraintStart_toEndOf="@id/imgPhoto3"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            android:textSize="12sp"
+                            android:textSize="@dimen/textsize_username"
                             android:textColor="@color/white"
                             android:paddingLeft="@dimen/entrada_marginBottom"
                             />
@@ -275,12 +277,12 @@
                             android:id="@+id/tvUser4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="RokuhiraChihiro"
+                            android:text="@string/username4"
                             app:layout_constraintStart_toEndOf="@id/imgPhoto4"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            android:textSize="12sp"
+                            android:textSize="@dimen/textsize_username"
                             android:textColor="@color/white"
                             android:paddingLeft="@dimen/entrada_marginBottom"
                             />

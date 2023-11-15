@@ -1,6 +1,7 @@
 package com.lusafolg.proyectoprimertrimestre
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -83,6 +85,34 @@ class InicioFragment : Fragment(), OnClickListener {
     override fun onClick(entrada: Entrada, position: Int) {
 
         cambiarpantalla(EntradaActivity(), entrada.id)
+
+    }
+
+    override fun onLongClick(entrada: Entrada) {
+
+        val preferences=InicioActivity().getPreferences(Context.MODE_PRIVATE)
+
+        val strsetdef= setOf<String>("0")
+
+        val listafavs=preferences.getStringSet("favs",strsetdef)
+
+        if (listafavs!!.contains(entrada.id.toString())){
+
+            Toast.makeText(requireContext(), "Esta entrada ya figura en Favoritos", Toast.LENGTH_SHORT).show()
+
+        }else{
+
+            listafavs.add(entrada.id.toString())
+
+            with(preferences.edit()){
+
+                putStringSet("favs", listafavs).apply()
+
+            }
+
+            Toast.makeText(requireContext(), "Entrada añadida a Favoritos", Toast.LENGTH_SHORT).show()
+
+        }
 
     }
 
